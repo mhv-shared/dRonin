@@ -243,6 +243,7 @@ static int PIOS_FLYINGPIO_SendCmd(struct flyingpi_msg *msg) {
 		PIOS_Assert(fpio_dev->err_cnt < MAX_CONSEC_ERRS);
 	}
 
+	PIOS_Thread_Sleep(1);
 	return ret;
 
 }

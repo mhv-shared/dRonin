@@ -146,8 +146,8 @@ void SystemInit (void)
   /* Reset HSEON, CSSON and PLLON bits */
   RCC->CR &= (uint32_t)0xFEF6FFFF;
 
-  /* Reset HSEBYP bit */
-  RCC->CR &= (uint32_t)0xFFFBFFFF;
+  /* Set HSEBYP bit */
+  RCC->CR |= (uint32_t)0x00040000;
 
   /* Reset PLLSRC, PLLXTPRE and PLLMUL[3:0] bits */
   RCC->CFGR &= (uint32_t)0xFFC0FFFF;
